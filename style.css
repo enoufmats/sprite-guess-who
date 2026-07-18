@@ -1,1 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
 
+body{
+    overflow:hidden;
+    background:#111735;
+    color:white;
+}
+
+#background{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#5a2cff 0%,transparent 40%),
+    radial-gradient(circle at bottom,#00b8ff 0%,transparent 35%),
+    linear-gradient(#14173c,#0a0f22);
+    z-index:-2;
+}
+
+.hidden{
+    display:none !important;
+}
+
+#menu{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+h1{
+    font-size:64px;
+    font-weight:800;
+    margin-bottom:15px;
+    text-shadow:0 0 25px #5fd7ff;
+}
+
+.subtitle{
+    opacity:.8;
+    margin-bottom:40px;
+    font-size:20px;
+}
+
+.menuButtons{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:320px;
+}
+
+.menuButtons button,
+#joinButton,
+#bottomBar button{
+    background:#2d7cff;
+    border:none;
+    color:white;
+    font-size:20px;
+    padding:16px;
+    border-radius:14px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.menuButtons button:hover,
+#joinButton:hover,
+#bottomBar button:hover{
+    transform:scale(1.05);
+    background:#53a2ff;
+}
+
+.joinArea{
+    margin-top:30px;
+    display:flex;
+    gap:10px;
+}
+
+#roomCode{
+    padding:14px;
+    width:170px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+}
+
+#game{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+#topBar{
+    height:70px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(12px);
+    font-weight:700;
+}
+
+#board{
+    flex:1;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+    gap:18px;
+    overflow:auto;
+}
+
+.card{
+    background:#20254f;
+    border-radius:16px;
+    cursor:pointer;
+    transition:.2s;
+    overflow:hidden;
+    border:3px solid transparent;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#61d5ff;
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.cardName{
+    text-align:center;
+    padding:12px;
+    font-weight:700;
+}
+
+.card.flipped{
+    opacity:.18;
+    transform:rotateY(180deg);
+}
+
+#bottomBar{
+    height:90px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    background:rgba(0,0,0,.35);
+}
+
+#popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#popupBox{
+    width:420px;
+    background:#1f2450;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+}
+
+#popupBox h2{
+    margin-bottom:15px;
+}
+
+#popupBox p{
+    margin-bottom:25px;
+}
+
+#popupButton{
+    padding:12px 28px;
+    background:#2d7cff;
+    border:none;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
