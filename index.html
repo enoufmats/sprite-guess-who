@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sprite Guess Who</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="background"></div>
+
+<div id="menu">
+
+<h1>SPRITE GUESS WHO</h1>
+
+<p class="subtitle">
+Online Multiplayer • AI • Firebase
+</p>
+
+<div class="menuButtons">
+
+<button id="createRoom">
+Create Room
+</button>
+
+<button id="joinRoom">
+Join Room
+</button>
+
+<button id="playAI">
+Play AI
+</button>
+
+</div>
+
+<div class="joinArea">
+
+<input
+id="roomCode"
+maxlength="6"
+placeholder="Room Code">
+
+<button id="joinButton">
+
+JOIN
+
+</button>
+
+</div>
+
+</div>
+  <div id="game" class="hidden">
+
+<div id="topBar">
+
+<div>
+
+Room:
+
+<span id="roomNumber">
+
+------
+
+</span>
+
+</div>
+
+<div>
+
+Turn:
+
+<span id="turnText">
+
+Waiting...
+
+</span>
+
+</div>
+
+<div>
+
+Opponent:
+
+<span id="opponentStatus">
+
+Connecting...
+
+</span>
+
+</div>
+
+</div>
+
+<div id="board">
+
+</div>
+
+<div id="bottomBar">
+
+<button id="askQuestion">
+
+Ask Question
+
+</button>
+
+<button id="guessButton">
+
+Guess Character
+
+</button>
+
+<button id="leaveGame">
+
+Leave Game
+
+</button>
+
+</div>
+
+</div>
+  <div id="popup" class="hidden">
+
+<div id="popupBox">
+
+<h2 id="popupTitle"></h2>
+
+<p id="popupText"></p>
+
+<button id="popupButton">
+
+OK
+
+</button>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script src="data.js"></script>
+<script src="firebase.js"></script>
+<script src="ai.js"></script>
+<script src="game.js"></script>
+
+</body>
+
+</html>
